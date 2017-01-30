@@ -1,5 +1,13 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+function __autoload($classname){
+    if (strpos($classname,'CI_')!==0) {
+        $file=APPPATH.'libraries/'.$classname.'.php';
+        if (file_exists($file) && is_file($file)) {
+            @include_once ($file);
+        }
+    }
+}
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +31,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/Git/RBAC/roleBasedAccess/';
+$config['base_url'] = 'http://'.$_SERVER['SERVER_NAME'].'/Git/RBAC/roleBasedAccess/';
 
 /*
 |--------------------------------------------------------------------------

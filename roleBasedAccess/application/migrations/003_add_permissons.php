@@ -2,31 +2,27 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Migration_Add_Users extends CI_Migration {
+class Migration_Add_permissons extends CI_Migration {
 
     public function up() {
         $this->dbforge->add_field(array(
-            'user_id' => array(
+            'perm_id' => array(
                 'type' => 'INT',
                 'constraint' => 5,
                 'unsigned' => TRUE,
                 'auto_increment' => TRUE
             ),
-            'userName' => array(
-                'type' => 'VARCHAR',
-                'constraint' => '100',
-            ),
-            'password' => array(
+            'perm_desc' => array(
                 'type' => 'VARCHAR',
                 'constraint' => '100',
             ),
         ));
-        $this->dbforge->add_key('user_id', TRUE);
-        $this->dbforge->create_table('users');
+        $this->dbforge->add_key('perm_id', TRUE);
+        $this->dbforge->create_table('permissons');
     }
 
     public function down() {
-        $this->dbforge->drop_table('users');
+        $this->dbforge->drop_table('permissons');
     }
 
 }
