@@ -7,6 +7,7 @@ class Migrate extends CI_Controller {
         }
        else{
            echo "Migrations Worked";
+           echo "well done";
        }
     }
 }
