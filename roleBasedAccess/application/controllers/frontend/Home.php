@@ -20,6 +20,10 @@ class Home extends Frontend_Controller {
 	 */
 	public function index()
 	{	
-            $this->load->view('site/theme/theme');
+            echo "fatih";
+	}
+	public function fatih($p)
+	{	echo $p;
+            echo "fatih";
 	}
 }
