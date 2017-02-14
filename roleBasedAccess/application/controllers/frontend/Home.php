@@ -22,8 +22,5 @@ class Home extends Frontend_Controller {
 	{	
             echo "fatih";
 	}
-	public function fatih($p)
-	{	echo $p;
-            echo "fatih";
-	}
+
 }
