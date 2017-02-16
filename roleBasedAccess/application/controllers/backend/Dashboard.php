@@ -22,22 +22,24 @@ class Dashboard extends Backend_Controller {
         $this->load->view('admin/inc/footer');
     }
 
-    public function pages($page="main") {
-         $this->load->view('admin/inc/head');
+    public function pages($page = "main") {
+        $this->load->view('admin/inc/head');
         $this->load->view('admin/inc/header');
-        $this->load->view('admin/pages/'.$page);
+        $this->load->view('admin/pages/' . $page);
         $this->load->view('admin/inc/footer');
     }
-    public function users($page="main") {
-         $this->load->view('admin/inc/head');
+
+    public function users($page = "main") {
+        $this->load->view('admin/inc/head');
         $this->load->view('admin/inc/header');
-        $this->load->view('admin/users/'.$page);
+        $this->load->view('admin/users/' . $page);
         $this->load->view('admin/inc/footer');
     }
-    public function posts($page="main") {
-         $this->load->view('admin/inc/head');
+
+    public function posts($page = "main") {
+        $this->load->view('admin/inc/head');
         $this->load->view('admin/inc/header');
-        $this->load->view('admin/posts/'.$page);
+        $this->load->view('admin/posts/'. $page);
         $this->load->view('admin/inc/footer');
     }
 
